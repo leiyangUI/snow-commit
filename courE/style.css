@@ -1,0 +1,22 @@
+body {
+    background-color: black;
+}
+
+.snow {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    top: -20px;
+    animation: 2s linear snow_fall;
+}
+
+/* keyframes permet de créer et modifier une animation à différents intervals de temps */
+@keyframes snow_fall {
+    from {
+        top: -20px;
+    }
+
+    to {
+        top: 850px;
+    }
+}

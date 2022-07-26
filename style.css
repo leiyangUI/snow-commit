@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+body {
+    /* background: rgb(100, 100, 199); */
+    background: linear-gradient(to right, rgba(0, 128, 128, 0.8), rgba(255, 0, 0, 0) 70%),
+        linear-gradient(217deg, rgba(176, 63, 241, 0.7), rgba(0, 255, 0, 0) 70%),
+        linear-gradient(to bottom, rgba(0, 0, 255, 0.47), rgba(0, 0, 255, 0.099) 70%);
+    /* backface-visibility: hidden; */
+    overflow: hidden;
+    user-select: none;
+    cursor: crosshair;
+    min-height: 100vh;
+    font-family: Montserrat, sans-serif;
+}
+
+.snow {
+    background-image: url(./snowflake-solid.svg);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 300px;
+    /* opacity: 0; */
+    /* background: rgb(164, 164, 255); */
+    filter: hue-rotate(0deg) blur(0);
+    animation: anim 4s linear forwards;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    transition: 0.3s;
+}
+
+
+@keyframes anim {
+    from {
+        top: -25px;
+    }
+
+    to {
+        /* top: ; */
+        /* animation: 8s; */
+        left: var(--left);
+        filter: hue-rotate(720deg) blur(0.1);
+        opacity: 1;
+        transform: translateY(105vh);
+    }
+}
+
+h3 {
+    font-size: 10rem;
+    text-align: center;
+    margin-top: 20px;
+    color: rgba(128, 128, 128, 0.555);
+}
